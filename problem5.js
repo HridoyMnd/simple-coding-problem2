@@ -10,15 +10,21 @@ Output:
  */
 
 // problem 5 solution here
-const numbers =  [5, 3, 5, 2, 3, 9, 2, 7];
+const numbers = [5, 3, 5, 2, 3, 9, 2, 7];
+const numbers2 = [1, 1, 1, 1];
 
-const removedDuplicate = []
 
-for(const number of numbers){
-    if(!removedDuplicate.includes(number)){
-        removedDuplicate.push(number)
+function removedDuplicateNumber(Input) {
+    const uniqueArrr = []
+
+    for (const number of Input) {
+        if (!uniqueArrr.includes(number)) {
+            uniqueArrr.push(number)
+        }
     }
-}
 
-console.log(removedDuplicate);
-console.log(numbers);
+    return uniqueArrr
+
+}
+const result5 = removedDuplicateNumber(numbers2);
+console.log(result5);
